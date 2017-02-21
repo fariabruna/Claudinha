@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveEsquerda : MonoBehaviour {
+public class PranchaMove : MonoBehaviour {
 
     public float velocidade = 1f;
     public float limite;
