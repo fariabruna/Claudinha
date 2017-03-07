@@ -15,12 +15,12 @@ public class GosmaMove : MonoBehaviour{
     }
 
     IEnumerator Move(float destino){
-        while (Mathf.Abs(destino - transform.localPosition.y) > 0.1f){
+        while (Mathf.Abs(destino - transform.position.y) > 0.1f){
             Vector3 direcao = (destino == max) ? new Vector3 (0, 1, 0) : Vector3.down;
-            Vector3 velocidadeVetorial = direcao * velocidadeHorizontal;
+            Vector3 velocidadeVetorial = direcao * velocidadeVertical;
             transform.position = transform.position + velocidadeVetorial * Time.deltaTime;
 
-            Vector3 velocidadeVetorial1 = Vector3.left * velocidadeVertical;
+            Vector3 velocidadeVetorial1 = Vector3.left * velocidadeHorizontal;
             transform.position = transform.position + velocidadeVetorial1 * Time.deltaTime;
 
             yield return null;
