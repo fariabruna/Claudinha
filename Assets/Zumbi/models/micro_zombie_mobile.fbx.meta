@@ -30,9 +30,9 @@ ModelImporter:
     400020: right_shoulder_zomb
     400022: root
     4300000: brian
-    7400000: Pulando
-    7400002: Aguardando
-    7400004: Morrendo
+    7400000: pulando
+    7400002: aguardando
+    7400004: morrendo
     9500000: //RootNode
     13700000: brian
   materials:
@@ -57,7 +57,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Aguardando
+      name: aguardando
       takeName: Take 001
       firstFrame: 6
       lastFrame: 65
@@ -109,7 +109,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Pulando
+      name: pulando
       takeName: Take 001
       firstFrame: 395
       lastFrame: 399
@@ -161,7 +161,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: Morrendo
+      name: morrendo
       takeName: Take 001
       firstFrame: 445
       lastFrame: 490
