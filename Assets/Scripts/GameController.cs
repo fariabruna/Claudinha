@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class GameController : MonoBehaviour {
 
+    public Estado estado { get; private set; }
+
     public float espera;
     public GameObject obstaculo;
     public float tempoDestruicao;
@@ -21,12 +23,11 @@ public class GameController : MonoBehaviour {
 	}
 
     void Start(){
-        StartCoroutine(GerarObstaculos());
-
+        estado = Estado.AguardoComecar;
     }
 
     IEnumerator GerarObstaculos(){
-        while (true){
+        while (GameController.instancia.estado == Estado.Jogando){
             Vector3 pos = new Vector3(15f, Random.Range(0.6f, 4.5f), 0f);
             GameObject obj = Instantiate(obstaculo, pos, Quaternion.identity) as GameObject;
             Destroy(obj, tempoDestruicao);
@@ -34,7 +35,12 @@ public class GameController : MonoBehaviour {
         }
     }
 
-	void Update () {
-	
-	}
+    public void PlayerComecou(){
+        estado = Estado.Jogando;
+        StartCoroutine(GerarObstaculos());
+    }
+
+    public void PlayerMorreu(){
+        estado = Estado.GameOver;
+    }
 }
